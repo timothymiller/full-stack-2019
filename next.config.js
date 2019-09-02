@@ -21,15 +21,15 @@ const themeVariables = lessToJS(
 )
 
 module.exports = withMDX(withLess({
+  // Now.sh deployment target
+  target: 'serverless',
+  // Markdown in JSX filetype support
+  pageExtensions: ['mdx', 'md', 'jsx', 'js'],
+  // custom webpack config for Ant Design Less
   lessLoaderOptions: {
     javascriptEnabled: true,
     modifyVars: themeVariables, // make your antd custom effective
   },
-  // Markdown in JSX filetype support
-  pageExtensions: ['mdx', 'md', 'jsx', 'js'],
-  // build folder like create-react-app
-  distDir: 'build',
-  // custom webpack config for Ant Design Less
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style.*?/
