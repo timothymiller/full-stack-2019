@@ -2,7 +2,7 @@
 
 Deploying web apps to production is hard. This is a template containing optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
 
-I use this template as a starting point for all my web apps. I include some example components demonstrating how the backend & frontend interact interact in a serverless enviornment, including frameworks, such as MongoDB, GraphQL, TypeScript, and Markdown in JSX.
+I use this template as a starting point for all my web apps. I include some example components demonstrating how the backend & frontend interact interact in a serverless enviornment, including frameworks, such as MongoDB, GraphQL, TypeScript, and JSX in Markdown.
 
 ## :wrench: How to setup
 
@@ -22,26 +22,27 @@ yarn dev
 
 ## :gem: Features
 
-- Ant Design
+- [Ant Design](https://github.com/ant-design/ant-design)
   - Crisp, Fresh Component Library
-- TypeScript (.ts, .tsx)
-- Less (.less)
-- Markdown in JSX (.md, .mdx)
+- [TypeScript](https://github.com/microsoft/TypeScript) (.ts, .tsx)
+- [Less](https://github.com/less/less.js) (.less)
+- [JSX in Markdown](https://github.com/mdx-js/mdx) (.md, .mdx)
   - Great for news articles or blogging content
-- MongoDB server side
+- [MongoDB server side](https://github.com/timothymiller/ant-design-next-graphql-template#how-to-setup-mongodb)
   - Managed NO-SQL via MongoDB Atlas
-- GraphQL client
+- [GraphQL client](https://github.com/timothymiller/ant-design-next-graphql-template#todo-how-to-setup-graphql)
   - Modern query language
-- Next.js
+- [Next.js](https://github.com/zeit/next.js)
   - Automatic Express routing for Node.js scripts placed in /pages/api/ 
-  - Easily add AMP support
+  - Easily add [AMP](https://developers.google.com/amp/) support
   - Automatic SSR or Static Rendering depending on call to getInitialProps
-- Perfect 100 Google Lighthouse audit score
+  - [And much more...](https://nextjs.org/#features)
+- Perfect 100 [Google Lighthouse audit](https://web.dev/measure) score
   - Performance
   - Accessibility
   - Best Practices
   - SEO
-  - Progressive Web App (PWA)
+  - [Progressive Web App](https://developers.google.com/web/progressive-web-apps/) (PWA)
 
 ## :rocket: Deploy to Production
 
