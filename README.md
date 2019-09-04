@@ -1,6 +1,6 @@
 # MERN + Ant Design + GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. This is the template I use for all MERN stack based Web Apps.
+Deploying web apps to production is hard. This is a template containing optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack. I use this template as a starting point for all my web apps. I include some example components demonstrating how the backend & frontend interact interact in a serverless enviornment, including frameworks, such as MongoDB, GraphQL, TypeScript, and Markdown in JSX.
 
 ## :wrench: How to setup
 
@@ -36,8 +36,9 @@ yarn dev
   - Automatic SSR or Static Rendering depending on call to getInitialProps
 - Perfect 100 Google Lighthouse audit score
   - Performance
+  - Accessibility
   - Best Practices
-  - Fanicer Stuff
+  - SEO
   - Progressive Web App (PWA)
 
 ## :rocket: Deploy to Production
