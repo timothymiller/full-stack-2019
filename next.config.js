@@ -1,31 +1,36 @@
 // Progressive Web App (PWA) support
-const withOffline = require('next-offline');
+const withOffline = require('next-offline')
 
 // .MDX support
-const images = require('remark-images');
-const emoji = require('remark-emoji');
+const images = require('remark-images')
+const emoji = require('remark-emoji')
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     mdPlugins: [images, emoji]
   }
-});
+})
+
+// Remove unsed CSS
+const withPurgeCss = require('next-purgecss')
 
 // .LESS support
 /* eslint-disable */
-const withLess = require('@zeit/next-less');
-const lessToJS = require('less-vars-to-js');
+const withLess = require('@zeit/next-less')
+const lessToJS = require('less-vars-to-js')
 const fs = require('fs');
 const path = require('path');
 
 // Where your antd-custom.less file lives
 const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, './assets/antd-custom.less'), 'utf8')
-);
+)
 
-module.exports = withOffline(withMDX(withLess({
+module.exports = withOffline(withMDX(withLess(withPurgeCss({
   // Now by ZEIT deployment target
   target: 'serverless',
+  // Purge CSS options
+  purgeCssEnabled: ({ dev, isServer }) => (!isDev && !isServer), // Only enable PurgeCSS for client-side production builds
   // Progressive Web App (PWA) support
   transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
   // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
@@ -81,4 +86,4 @@ module.exports = withOffline(withMDX(withLess({
     }
     return config
   },
-})));
+}))))
