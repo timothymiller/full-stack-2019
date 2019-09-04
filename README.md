@@ -33,11 +33,11 @@ yarn dev
 - [GraphQL client](https://github.com/timothymiller/ant-design-next-graphql-template#todo-how-to-setup-graphql)
   - Modern query language
 - [Next.js](https://github.com/zeit/next.js)
-  - Automatic Express routing for Node.js scripts placed in /pages/api/ 
+  - Automatic Express routing for Node.js scripts placed in /pages/api/
   - Easily add [AMP](https://developers.google.com/amp/) support
   - Automatic SSR or Static Rendering depending on call to getInitialProps
   - [And much more...](https://nextjs.org/#features)
-- Perfect 100 [Google Lighthouse audit](https://web.dev/measure) score
+- [Google Lighthouse audit](https://web.dev/measure) Perfect 100 score in all categories
   - Performance
   - Accessibility
   - Best Practices
