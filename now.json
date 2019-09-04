@@ -1,7 +1,7 @@
 {
     "name": "ant-design-next-graphql-template",
-    "version": 1,
+    "version": 2,
     "env": {
-        "MONGODB_URI": "@mongodb-uri"
+        "MONGODB_PASSWORD": "@mongodb-password"
     }
 }
