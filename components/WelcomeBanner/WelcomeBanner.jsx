@@ -9,9 +9,9 @@ const WelcomeBanner = (props) => {
         <Card
             hoverable
             style={{ width: 240 }}
-            cover={<img alt="example" src="/images/big-images-2.jpg" />}
+            cover={<img alt="example" src="/static/images/big-images-2.jpg" />}
         >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
+            <Meta title="YouTube website" description="www.timknowsbest.com" />
         </Card>
 
     </div>);
