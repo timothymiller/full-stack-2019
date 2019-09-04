@@ -41,9 +41,12 @@ yarn dev
   - Progressive Web App (PWA)
 
 ## :rocket: Deploy to Production
-#### Defaults:
-  - Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
-  - Resources inside of /static/ are deployed to the in-house CDN managed via Now by ZEIT.
+
+### Defaults
+
+- Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
+
+- Resources inside of /static/ are deployed to the in-house CDN managed via Now by ZEIT.
 
 ```bash
 now login
@@ -52,16 +55,33 @@ now --prod
 
 ## :microscope: Tutorials
 
-### TODO How to setup MongoDB
+### How to setup MongoDB
 
 1. Create a file called '.env' (no single quotes) in the root directory with the following text, replacing <mongodb_uri> with the uri provided for the database you created from MongoDB Atlas.
+
 ```bash
 MONGODB_URI="<mongodb_uri>"
 ```
+
 2. Sensitive credentials must be stored with adequate security in a production enviornment. For this, I use Now Secrets. Add an environment variable called MONGODB_URI to your web app for accessing your MongoDB instance by executing the following command:
+
 ```bash
 now secrets add MONGODB_URI <mongodb_uri>
 ```
 
+3. Use
+
+```bash
+now dev
+```
+
+instead of 
+
+```bash
+yarn dev
+```
+
+to handle loading enviornment variables into your runtime config.
+4. Checkout /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
 
 ### TODO How to setup GraphQL
