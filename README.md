@@ -1,6 +1,6 @@
 # MERN + Ant Design + GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. This is the template I use for all MERN stack based Web Apps.
+Deploying web apps to production is hard. When create-react-app won't cut it, there is this template. This is the template I use for all MERN stack based Web Apps.
 
 ## :hammer: How to setup
 
@@ -21,7 +21,8 @@ Deploying web apps to production is hard. This is the template I use for all MER
 - Ant Design
   - Crisp, Fresh Component Library
 - TypeScript (.ts, .tsx)
-- Markdown in JSX (.md, .mdx, .js, .jsx)
+- Less (.less)
+- Markdown in JSX (.md, .mdx)
   - Great for news articles or blogging content
 - MongoDB server side
   - Managed NO-SQL via MongoDB Atlas
@@ -31,6 +32,11 @@ Deploying web apps to production is hard. This is the template I use for all MER
   - Automatic Express routing for Node.js scripts placed in /pages/api/ 
   - Easily add AMP support
   - Automatic SSR or Static Rendering depending on call to getInitialProps
+- Perfect 100 Google Lighthouse audit score
+  - Performance
+  - Best Practices
+  - Fanicer Stuff
+  - Progressive Web App (PWA)
 
 ## :rocket: Deploy to Production
 #### Scaling is handled automatically when targeting serverless when deploying to Now by ZEIT.
