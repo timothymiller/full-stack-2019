@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "now-build": "next build"
+    "now-dev": "now dev",
+    "production": "now --prod"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.4.0",

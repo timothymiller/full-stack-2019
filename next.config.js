@@ -30,7 +30,7 @@ module.exports = withOffline(withMDX(withLess(withPurgeCss({
   // Now by ZEIT deployment target
   target: 'serverless',
   // Purge CSS options
-  purgeCssEnabled: ({ dev, isServer }) => (!isDev && !isServer), // Only enable PurgeCSS for client-side production builds
+  purgeCssEnabled: ({ isDev, isServer }) => (!isDev && !isServer), // Only enable PurgeCSS for client-side production builds
   // Progressive Web App (PWA) support
   transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
   // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
