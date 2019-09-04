@@ -57,25 +57,25 @@ now --prod
 
 ### How to setup MongoDB
 
-1. Create a file called '.env' (no single quotes) in the root directory with the following text, replacing <mongodb_uri> with the uri provided for the database you created from MongoDB Atlas.
+- Create a file called '.env' (no single quotes) in the root directory with the following text, replacing <mongodb_uri> with the uri provided for the database you created from MongoDB Atlas.
 
 ```bash
 MONGODB_URI="<mongodb_uri>"
 ```
 
-2. Sensitive credentials must be stored with adequate security in a production enviornment. For this, I use Now Secrets. Add an environment variable called MONGODB_URI to your web app for accessing your MongoDB instance by executing the following command:
+- Sensitive credentials must be stored with adequate security in a production enviornment. For this, I use Now Secrets. Add an environment variable called MONGODB_URI to your web app for accessing your MongoDB instance by executing the following command:
 
 ```bash
 now secrets add MONGODB_URI <mongodb_uri>
 ```
 
-3. Use
+- Use
 
 ```bash
 now dev
 ```
 
-instead of 
+instead of
 
 ```bash
 yarn dev
