@@ -1,22 +1,22 @@
 # MERN + Ant Design + GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. When create-react-app won't cut it, there is this template. This is the template I use for all MERN stack based Web Apps.
+Deploying web apps to production is hard. This is the template I use for all MERN stack based Web Apps.
 
-## :hammer: How to setup
+## :wrench: How to setup
 
 1. git clone https://github.com/timothymiller/ant-design-next-graphql-template.git
 2. cd ant-design-next-graphql-template
 3. yarn
 4. yarn dev
 
-## :wrench: Tech Stack
+## :hamburger: Tech Stack
 
 - MongoDB
 - Express
 - React
 - Node
 
-## :nut_and_bolt: Features
+## :gem: Features
 
 - Ant Design
   - Crisp, Fresh Component Library
@@ -45,8 +45,8 @@ Deploying web apps to production is hard. When create-react-app won't cut it, th
   - now login
   - now --prod
 
-## Tutorials
+## :microscope: Tutorials
 
-### TODO How to MongoDB
+### TODO How to setup MongoDB
 
-### TODO GraphQL config
+### TODO How to setup GraphQL
