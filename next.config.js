@@ -1,28 +1,56 @@
+// Progressive Web App (PWA) support
+const withOffline = require('next-offline');
+
 // .MDX support
-const images = require('remark-images')
-const emoji = require('remark-emoji')
+const images = require('remark-images');
+const emoji = require('remark-emoji');
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
     mdPlugins: [images, emoji]
   }
-})
+});
 
 // .LESS support
 /* eslint-disable */
-const withLess = require('@zeit/next-less')
-const lessToJS = require('less-vars-to-js')
-const fs = require('fs')
-const path = require('path')
+const withLess = require('@zeit/next-less');
+const lessToJS = require('less-vars-to-js');
+const fs = require('fs');
+const path = require('path');
 
 // Where your antd-custom.less file lives
 const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, './assets/antd-custom.less'), 'utf8')
-)
+);
 
-module.exports = withMDX(withLess({
-  // Now.sh deployment target
+module.exports = withOffline(withMDX(withLess({
+  // Now by ZEIT deployment target
   target: 'serverless',
+  // Progressive Web App (PWA) support
+  transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
+  // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
+  // turn on the SW in dev mode so that we can actually test it
+  generateInDevMode: true,
+  workboxOpts: {
+    swDest: 'static/service-worker.js',
+    runtimeCaching: [
+      {
+        urlPattern: /^https?.*/,
+        handler: 'NetworkFirst',
+        options: {
+          cacheName: 'https-calls',
+          networkTimeoutSeconds: 15,
+          expiration: {
+            maxEntries: 150,
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
+          },
+          cacheableResponse: {
+            statuses: [0, 200],
+          },
+        },
+      },
+    ],
+  },
   // Markdown in JSX filetype support
   pageExtensions: ['mdx', 'md', 'jsx', 'js'],
   // custom webpack config for Ant Design Less
@@ -53,4 +81,4 @@ module.exports = withMDX(withLess({
     }
     return config
   },
-}))
+})));
