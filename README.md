@@ -39,8 +39,9 @@ Deploying web apps to production is hard. This is the template I use for all MER
   - Progressive Web App (PWA)
 
 ## :rocket: Deploy to Production
-#### Scaling is handled automatically when targeting serverless when deploying to Now by ZEIT.
-#### Resources inside of /static/ are deployed to CDN by Now.
+#### Defaults:
+  -#### Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
+  -#### Resources inside of /static/ are deployed to the in-house CDN managed via Now by ZEIT.
 
   - now login
   - now --prod
