@@ -4,7 +4,7 @@ Deploying web apps to production is hard. This is the template I use for all MER
 
 ## :wrench: How to setup
 
-```console
+```bash
 git clone https://github.com/timothymiller/ant-design-next-graphql-template.git
 cd ant-design-next-graphql-template
 yarn
@@ -42,10 +42,10 @@ yarn dev
 
 ## :rocket: Deploy to Production
 #### Defaults:
-  -Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
+  - Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
   - Resources inside of /static/ are deployed to the in-house CDN managed via Now by ZEIT.
 
-```console
+```bash
 now login
 now --prod
 ```
