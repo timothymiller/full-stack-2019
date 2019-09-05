@@ -1,5 +1,8 @@
-// Progressive Web App (PWA) support
+// Service Worker for Progressive Web App (PWA) standards
 const withOffline = require('next-offline')
+
+// Bundle Analyzer
+const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
 
 // .MDX support
 const images = require('remark-images')
@@ -11,27 +14,20 @@ const withMDX = require('@next/mdx')({
   }
 })
 
-// Remove unsed CSS
-const withPurgeCss = require('next-purgecss')
-
 // .LESS support
 /* eslint-disable */
 const withLess = require('@zeit/next-less')
 const lessToJS = require('less-vars-to-js')
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 // Where your antd-custom.less file lives
-const themeVariables = lessToJS(
-  fs.readFileSync(path.resolve(__dirname, './assets/antd-custom.less'), 'utf8')
-)
+const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, './assets/antd-custom.less'), 'utf8'))
 
-module.exports = withOffline(withMDX(withLess(withPurgeCss({
+module.exports = withBundleAnalyzer(withOffline(withMDX(withLess({
   // Now by ZEIT deployment target
   target: 'serverless',
-  // Purge CSS options
-  purgeCssEnabled: ({ isDev, isServer }) => (!isDev && !isServer), // Only enable PurgeCSS for client-side production builds
-  // Progressive Web App (PWA) support
+  // Service Worker for Progressive Web App (PWA) standards
   transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
   // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
   // turn on the SW in dev mode so that we can actually test it
@@ -55,6 +51,19 @@ module.exports = withOffline(withMDX(withLess(withPurgeCss({
         },
       },
     ],
+  },
+  // Webpack Bundle Analyzer
+  analyzeServer: ["server", "both"].includes(process.env.BUNDLE_ANALYZE),
+  analyzeBrowser: ["browser", "both"].includes(process.env.BUNDLE_ANALYZE),
+  bundleAnalyzerConfig: {
+    server: {
+      analyzerMode: 'static',
+      reportFilename: '../bundles/server.html'
+    },
+    browser: {
+      analyzerMode: 'static',
+      reportFilename: '../bundles/client.html'
+    }
   },
   // Markdown in JSX filetype support
   pageExtensions: ['mdx', 'md', 'jsx', 'js'],

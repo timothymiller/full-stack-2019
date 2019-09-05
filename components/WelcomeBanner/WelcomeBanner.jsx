@@ -2,9 +2,8 @@ import './style.less';
 import { Card } from 'antd';
 const { Meta } = Card;
 
-
 const WelcomeBanner = (props) => {
-
+    
     return (<div className="WelcomeBanner">
         <Card
             hoverable

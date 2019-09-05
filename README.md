@@ -13,6 +13,11 @@ yarn
 yarn dev
 ```
 
+## :warning: Requirements
+- [yarn](https://yarnpkg.com)
+- [now-cli](https://zeit.co/download)
+- [MongoDB Atlas Account](https://www.mongodb.com/download-center)
+
 ## :hamburger: Tech Stack
 
 - MongoDB
@@ -37,6 +42,20 @@ yarn dev
   - Easily add [AMP](https://developers.google.com/amp/) support
   - Automatic SSR or Static Rendering depending on call to getInitialProps
   - [And much more...](https://nextjs.org/#features)
+- Bundle Analyzer
+```bash
+# Build and analyze the back end server bundle
+BUNDLE_ANALYZE=server yarn build
+
+# Build and analyze the front end browser bundle
+BUNDLE_ANALYZE=browser yarn build
+
+# Build and analyze both server and browser
+BUNDLE_ANALYZE=both yarn build
+
+# Build and analyze neither server nor browser
+yarn build
+```
 - [Google Lighthouse audit](https://web.dev/measure) Perfect 100 score in all categories
   - Performance
   - Accessibility
@@ -56,6 +75,10 @@ yarn dev
 now login
 now --prod
 ```
+
+## :construction: Roadmap
+
+- Remove unused CSS with [next-purgecss](https://github.com/lucleray/next-purgecss) once Ant Design is supported
 
 ## :microscope: Tutorials
 
