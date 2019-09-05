@@ -11,7 +11,7 @@ const WelcomeBanner = (props) => {
             cover={<img alt="example" src="/static/images/big-images-2.jpg
             " />}
         >
-            <Meta title="YouTube website" description="www.timknowsbest.com" />
+            {/* <Meta title="YouTube website" description="www.timknowsbest.com" /> */}
         </Card>
 
     </div>);

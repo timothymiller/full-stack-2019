@@ -65,3 +65,6 @@ build/
 
 # Yarn lock
 yarn.lock
+
+# Webpack bundle analyzer
+bundles/
