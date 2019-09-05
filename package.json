@@ -1,10 +1,7 @@
 {
-  "name": "ant-design-next-graphql",
+  "name": "ant-design-next-graphql-template",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "10.x"
-  },
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -14,9 +11,6 @@
     "production": "now --prod"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.4.0",
-    "@next/mdx": "^9.0.3",
-    "@zeit/next-bundle-analyzer": "^0.1.2",
     "antd": "^3.22.2",
     "babel-plugin-import": "^1.12.1",
     "global": "^4.4.0",
@@ -28,12 +22,25 @@
     "null-loader": "2.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "remark-emoji": "^2.0.2",
-    "remark-images": "^1.0.0"
+    "next-optimized-images": "^2.5.3",
+    "lqip-loader": "^2.2.0",
+    "image-trace-loader": "^0.1.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "responsive-loader": "^1.2.0",
+    "sharp": "^0.23.0",
+    "webp-loader": "^0.5.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.3",
     "@zeit/next-less": "^1.0.1",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "@mdx-js/loader": "^1.4.0",
+    "@next/mdx": "^9.0.3",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "remark-emoji": "^2.0.2",
+    "remark-images": "^1.0.0"
   }
 }

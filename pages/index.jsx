@@ -9,8 +9,8 @@ import WelcomeBanner from '../components/WelcomeBanner/WelcomeBanner'
 export default () => (
   <Layout>
     <PageHeader
-      title="TimKnowsBest"
-      subTitle="dot com"
+      title="Template"
+      subTitle=""
     >
     </PageHeader>
     <WelcomeBanner />

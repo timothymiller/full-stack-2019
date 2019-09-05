@@ -1,3 +1,6 @@
+// Cloudinary like functionality
+const withOptimizedImages = require('next-optimized-images')
+
 // Service Worker for Progressive Web App (PWA) standards
 const withOffline = require('next-offline')
 
@@ -14,6 +17,9 @@ const withMDX = require('@next/mdx')({
   }
 })
 
+// .CSS support
+const withCss = require('@zeit/next-css')
+
 // .LESS support
 /* eslint-disable */
 const withLess = require('@zeit/next-less')
@@ -24,7 +30,7 @@ const path = require('path')
 // Where your antd-custom.less file lives
 const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, './assets/antd-custom.less'), 'utf8'))
 
-module.exports = withBundleAnalyzer(withOffline(withMDX(withLess({
+module.exports = withBundleAnalyzer(withOffline(withOptimizedImages(withMDX(withCss(withLess({
   // Now by ZEIT deployment target
   target: 'serverless',
   // Service Worker for Progressive Web App (PWA) standards
@@ -67,6 +73,12 @@ module.exports = withBundleAnalyzer(withOffline(withMDX(withLess({
   },
   // Markdown in JSX filetype support
   pageExtensions: ['mdx', 'md', 'jsx', 'js'],
+  // Locally scored CSS modules
+  // cssModules: true,
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: "[local]___[hash:base64:5]",
+  },
   // custom webpack config for Ant Design Less
   lessLoaderOptions: {
     javascriptEnabled: true,
@@ -95,4 +107,4 @@ module.exports = withBundleAnalyzer(withOffline(withMDX(withLess({
     }
     return config
   },
-}))))
+}))))))

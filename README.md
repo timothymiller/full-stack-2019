@@ -39,8 +39,15 @@ yarn dev
   - Modern query language
 - [Next.js](https://github.com/zeit/next.js)
   - Automatic Express routing for Node.js scripts placed in /pages/api/
-  - Easily add [AMP](https://developers.google.com/amp/) support
   - Automatic SSR or Static Rendering depending on call to getInitialProps
+  - Locally scoped CSS modules
+  - Optimized images
+    - Serve images in next-gen formats - Convert JPEG/PNG to WebP on the fly
+    - Properly size images - Resize images on the fly
+    - Efficiently encode images for CDN deployment
+    - Progressive image loading
+    - Optimizations for GIF & SVG files
+  - Easily add [AMP](https://developers.google.com/amp/) support
   - [And much more...](https://nextjs.org/#features)
 - Bundle Analyzer
 ```bash
@@ -84,11 +91,13 @@ now --prod
 
 ### How to setup MongoDB
 
-Create a file called '.env' (no single quotes) in the root directory with the following text, replacing <mongodb_uri> with the uri provided for the database you created from MongoDB Atlas.
+Create a file called '.env' (no single quotes) in the root directory with the following text
 
 ```bash
 MONGODB_URI="<mongodb_uri>"
 ```
+
+Replace <mongodb_uri> with the uri provided for the database you created from MongoDB Atlas.
 
 Sensitive credentials must be stored with adequate security in a production enviornment. For this, I use Now Secrets. Add an environment variable called MONGODB_URI to your web app for accessing your MongoDB instance by executing the following command:
 
@@ -108,7 +117,8 @@ instead of
 yarn dev
 ```
 
-to handle loading enviornment variables into your runtime config.
-4. Checkout /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
+Now handles loading enviornment variables into your runtime config behind the scenes.
+
+- Checkout /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
 
 ### TODO How to setup GraphQL

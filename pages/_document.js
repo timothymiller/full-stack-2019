@@ -3,10 +3,11 @@ import Document, { Head, Main, NextScript } from 'next/document';
 export default class MyDocument extends Document {
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           {/* Responsive */}
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
           {/* Favicon */}
           <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png" />
@@ -23,6 +24,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" />
           <meta name="msapplication-TileColor" content="#135200" />
           <meta name="msapplication-TileImage" content="/static/favicon/ms-icon-144x144.png" />
+
           {/* Progressive Web App Manifest + Theme Color */}
           <link rel="manifest" href="/static/favicon/manifest.json" />
           <meta name="theme-color" content="#135200" />
