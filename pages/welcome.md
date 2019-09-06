@@ -48,21 +48,9 @@ yarn dev
     - Progressive image loading
     - Optimizations for GIF & SVG files
   - Easily add [AMP](https://developers.google.com/amp/) support
-  - [And much more...](https://nextjs.org/#features)
-- Bundle Analyzer
-```bash
-# Build and analyze the back end server bundle
-BUNDLE_ANALYZE=server yarn build
-
-# Build and analyze the front end browser bundle
-BUNDLE_ANALYZE=browser yarn build
-
-# Build and analyze both server and browser
-BUNDLE_ANALYZE=both yarn build
-
-# Build and analyze neither server nor browser
-yarn build
-```
+  - [Webpack Bundle Analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
+  - [And much more...](https://nextjs.org/#features)  
+[alt text](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
 - [Google Lighthouse audit](https://web.dev/measure) Perfect 100 score in all categories
   - Performance
   - Accessibility
@@ -123,3 +111,9 @@ Now handles loading enviornment variables into your runtime config behind the sc
 - Checkout /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
 
 ### TODO How to setup GraphQL
+
+## License 
+
+This Template is licensed under the [GNU General Public License, version 3 (GPLv3)](http://www.gnu.org/licenses/gpl-3.0.html) and is distributed free of charge.
+
+

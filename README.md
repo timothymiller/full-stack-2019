@@ -63,6 +63,7 @@ BUNDLE_ANALYZE=both yarn build
 # Build and analyze neither server nor browser
 yarn build
 ```
+[alt text](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
 - [Google Lighthouse audit](https://web.dev/measure) Perfect 100 score in all categories
   - Performance
   - Accessibility

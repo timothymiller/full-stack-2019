@@ -21,19 +21,20 @@ const components = {
 };
 
 export default () => (
-  
+
   <Layout>
-    <Header>
-      <PageHeader title="Template"
+    {/* <Header> */}
+    <PageHeader title="Template"
+      avatar={{ src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' }}
       extra={[
-          <Button href="https://github.com/timothymiller/mern-ant-design-graphql-next-template"
-           key="2">View Source Code</Button>,
+        <Button href="https://github.com/timothymiller/mern-ant-design-graphql-next-template"
+          key="2">View Source Code</Button>,
         <Link href="/privacy-policy">
           <Button key="1" type="primary">View Privacy Policy</Button>
         </Link>,
       ]}>
-      </PageHeader>
-    </Header>
+    </PageHeader>
+    {/* </Header> */}
     <Content>
       <MDXProvider components={components}>
         <Welcome />
