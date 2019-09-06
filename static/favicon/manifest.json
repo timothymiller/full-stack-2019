@@ -2,10 +2,10 @@
     "name": "MERN Template",
     "short_name": "Template",
     "start_url": "/?source=pwa",
-    "background_color": "#135200",
+    "background_color": "#1890ff",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#135200",
+    "theme_color": "#1890ff",
     "icons": [
         {
             "src": "/static/favicon/icons-192.png",
