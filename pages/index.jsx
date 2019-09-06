@@ -20,11 +20,15 @@ const components = {
   )
 };
 
+const headerIcon = require('../static/favicon/icons-192.png?webp?resize&size=48');
+
 export default () => (
 
   <Layout>
     <PageHeader title="Template"
-      avatar={{ src: '/static/favicon/icons-192.png' }}
+      avatar={{
+        src: headerIcon
+      }}
       extra={[
         <Button href="https://github.com/timothymiller/mern-ant-design-graphql-next-template"
           key="2">View Source Code</Button>,
@@ -34,8 +38,8 @@ export default () => (
       ]}>
     </PageHeader>
     <Content>
-      <GraphQLDemo />
-      <EmailListForm />
+      <GraphQLDemo></GraphQLDemo>
+      <EmailListForm></EmailListForm>
       <MDXProvider components={components}>
         <Welcome />
       </MDXProvider>

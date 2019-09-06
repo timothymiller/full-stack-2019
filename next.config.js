@@ -1,4 +1,4 @@
-// Cloudinary like functionality
+// Serve images in WebP where available & at reduced size when possible.
 const withOptimizedImages = require('next-optimized-images')
 
 // Service Worker for Progressive Web App (PWA) standards

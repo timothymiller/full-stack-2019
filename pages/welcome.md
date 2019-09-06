@@ -113,7 +113,7 @@ yarn dev
 
 Now handles loading enviornment variables into your runtime config behind the scenes.
 
-- Checkout [/api/add-email-subscriber](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/add-email-subscriber.js) & /components/EmailListForm for examples on interacting with MongoDB in a serverless MERN stack.
+- Checkout [/api/add-email-subscriber](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/add-email-subscriber.js) & [/components/EmailListForm](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/components/EmailListForm/EmailListForm.jsx) for examples on interacting with MongoDB in a serverless MERN stack.
 
 [Read more](https://timknowsbest.com/how-to-setup-mongodb)
 
