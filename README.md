@@ -2,9 +2,11 @@
 
 # MERN + Ant Design + GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. This is a template containing optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
+Deploying web apps to production is hard. This GPLv3-licensed open source template contains optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
 
-I use this template as a starting point for all my web apps. I include some example components demonstrating how the backend & frontend interact interact in a serverless enviornment, including frameworks, such as MongoDB, GraphQL, TypeScript, and JSX in Markdown.
+This template improves upon a pure MERN stack by including nice-to-have technologies, such as Ant Design, GraphQL, TypeScript, LESS, and JSX in Markdown. I include some example components demonstrating how the frontend & backend interact, following best practices in a serverless enviornment.
+
+I use this template as a starting point for all my web apps. If this template helps you, please consider [leaving me an endorsement on LinkedIn](https://www.linkedin.com/in/timothymillerdev/).
 
 ## :wrench: How to setup
 
@@ -51,7 +53,7 @@ yarn dev
     - Optimizations for GIF & SVG files
   - Easily add [AMP](https://developers.google.com/amp/) support
   - [Webpack Bundle Analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
-  - [And much more...](https://nextjs.org/#features)
+  - [And much more...](https://nextjs.org/#features)  
 - [Google Lighthouse audit](https://web.dev/measure) Perfect 100 score in all categories
   - Performance
   - Accessibility
@@ -59,7 +61,7 @@ yarn dev
   - SEO
   - [Progressive Web App](https://developers.google.com/web/progressive-web-apps/) (PWA)
 
-![Perfect Lighthouse score](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
+![Perfect Lighthouse score|52x37](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
 
 ## :rocket: Deploy to Production
 
@@ -111,11 +113,13 @@ yarn dev
 
 Now handles loading enviornment variables into your runtime config behind the scenes.
 
-- Take a look at /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
+- Checkout [/api/add-email-subscriber](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/add-email-subscriber.js) & /components/EmailListForm for examples on interacting with MongoDB in a serverless MERN stack.
 
-[Read more in depth](https://timknowsbest.com/how-to-setup-graphql)
+[Read more](https://timknowsbest.com/how-to-setup-mongodb)
 
 ### TODO How to setup GraphQL
+
+[Read more](https://timknowsbest.com/how-to-setup-graphql)
 
 ## License 
 
