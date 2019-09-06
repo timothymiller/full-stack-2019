@@ -4,13 +4,13 @@ import {
   Button
 } from 'antd';
 import "./style.less";
-
-const { Header, Content, Footer } = Layout;
-
 import Link from 'next/link';
-
 import { MDXProvider } from '@mdx-js/react';
 import Welcome from './welcome.md';
+import EmailListForm from '../components/EmailListForm/EmailListForm';
+import GraphQLDemo from '../components/GraphQLDemo/GraphQLDemo';
+
+const { Content, Footer } = Layout;
 
 const components = {
   wrapper: props => (
@@ -23,7 +23,6 @@ const components = {
 export default () => (
 
   <Layout>
-    {/* <Header> */}
     <PageHeader title="Template"
       avatar={{ src: '/static/favicon/icons-192.png' }}
       extra={[
@@ -34,8 +33,9 @@ export default () => (
         </Link>,
       ]}>
     </PageHeader>
-    {/* </Header> */}
     <Content>
+      <GraphQLDemo />
+      <EmailListForm />
       <MDXProvider components={components}>
         <Welcome />
       </MDXProvider>

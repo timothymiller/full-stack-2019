@@ -1,4 +1,4 @@
-<p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="100" src="/static/favicon/icons-512.png" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
+<p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="256" src="/static/favicon/icons-512.png" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
 
 # MERN + Ant Design + GraphQL + Next.js Production Template
 
