@@ -1,3 +1,5 @@
+<p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="100" src="/static/favicon/icons-512.png" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
+
 # MERN + Ant Design + GraphQL + Next.js Production Template
 
 Deploying web apps to production is hard. This is a template containing optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
@@ -48,28 +50,16 @@ yarn dev
     - Progressive image loading
     - Optimizations for GIF & SVG files
   - Easily add [AMP](https://developers.google.com/amp/) support
+  - [Webpack Bundle Analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
   - [And much more...](https://nextjs.org/#features)
-- Bundle Analyzer
-```bash
-# Build and analyze the back end server bundle
-BUNDLE_ANALYZE=server yarn build
-
-# Build and analyze the front end browser bundle
-BUNDLE_ANALYZE=browser yarn build
-
-# Build and analyze both server and browser
-BUNDLE_ANALYZE=both yarn build
-
-# Build and analyze neither server nor browser
-yarn build
-```
-![alt text](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
 - [Google Lighthouse audit](https://web.dev/measure) Perfect 100 score in all categories
   - Performance
   - Accessibility
   - Best Practices
   - SEO
   - [Progressive Web App](https://developers.google.com/web/progressive-web-apps/) (PWA)
+
+![Perfect Lighthouse score](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
 
 ## :rocket: Deploy to Production
 
@@ -121,6 +111,23 @@ yarn dev
 
 Now handles loading enviornment variables into your runtime config behind the scenes.
 
-- Checkout /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
+- Take a look at /api/add-email & /components/EmailList for examples on interacting with MongoDB in a serverless MERN stack.
+
+[Read more in depth](https://timknowsbest.com/how-to-setup-graphql)
 
 ### TODO How to setup GraphQL
+
+## License 
+
+This Template is licensed under the [GNU General Public License, version 3 (GPLv3)](http://www.gnu.org/licenses/gpl-3.0.html) and is distributed free of charge.
+
+
+## Author
+
+Timothy Miller
+
+* GitHub: [https://github.com/timothymiller](https://github.com/timothymiller) :bulb:
+
+* Website: [https://timknowsbest.com](https://timknowsbest.com) :computer:
+
+* Donation: [https://timknowsbest.com/donate](https://timknowsbest.com/donate) :money_with_wings:

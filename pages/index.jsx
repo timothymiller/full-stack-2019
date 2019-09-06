@@ -25,7 +25,7 @@ export default () => (
   <Layout>
     {/* <Header> */}
     <PageHeader title="Template"
-      avatar={{ src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' }}
+      avatar={{ src: '/static/favicon/icons-192.png' }}
       extra={[
         <Button href="https://github.com/timothymiller/mern-ant-design-graphql-next-template"
           key="2">View Source Code</Button>,
@@ -40,6 +40,6 @@ export default () => (
         <Welcome />
       </MDXProvider>
     </Content>
-    <Footer style={{ textAlign: 'center', padding: '32px' }}>Created by Timothy Miller</Footer>
+    <Footer style={{ textAlign: 'center', padding: '32px' }}>This is a footer</Footer>
   </Layout>
 )
