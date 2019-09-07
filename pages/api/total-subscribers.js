@@ -1,4 +1,4 @@
-// Import Dependencies
+const url = require('url')
 const MongoClient = require('mongodb').MongoClient
 
 // Create cached connection variable
@@ -16,30 +16,34 @@ async function connectToDatabase(uri) {
     // If no connection is cached, create a new one
     const client = await MongoClient.connect(uri, { useNewUrlParser: true })
 
-    // Select the database
-    const db = await client.db("mern-template")
+    // Select the database through the connection,
+    // using the database path of the connection string
+    const db = await client.db(url.parse(uri).pathname.substr(1))
 
     // Cache the database connection and return the connection
     cachedDb = db
     return db
 }
 
-export default async (req, res) => {
+export default (req, res) => {
     switch (req.method) {
         case "GET":
             break;
 
         case "POST":
+            const emailAddress = req.body.emailAddress;
+            console.log(emailAddress);
+            // Get a database connection, cached or otherwise,
+            // using the connection string environment variable as the argument
             const db = await connectToDatabase(process.env.MONGODB_URI)
-            const collection = await db.collection('users')
-            collection.insert(req.body, function (err, doc) {
-                if (err) {
-                    console.error(err);
-                    res.status(500).end();
-                }
-                res.status(200).end();
 
-            });
+            // Select the "users" collection from the database
+            const collection = await db.collection('users')
+
+            // Select the users collection from the database
+            const users = await collection.find({}).toArray()
+
+            res.status(200).json({numEmailSubscribers: users.length});
             break;
 
         default:

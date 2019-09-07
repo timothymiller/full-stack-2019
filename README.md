@@ -88,18 +88,18 @@ now --prod
 Create a file called '.env' (no single quotes) in the root directory with the following text
 
 ```bash
-MONGODB_URI="<mongodb_uri>"
+MONGODB_URI=your_mongodb_uri_here
 ```
 
-Replace <mongodb_uri> with the uri provided for the database you created from MongoDB Atlas.
+Replace your_mongodb_uri_here with the uri provided for the database you created from MongoDB Atlas.
 
 Sensitive credentials must be stored with adequate security in a production enviornment. For this, I use Now Secrets. Add an environment variable called MONGODB_URI to your web app for accessing your MongoDB instance by executing the following command:
 
 ```bash
-now secrets add MONGODB_URI <mongodb_uri>
+now secrets add MONGODB_URI your_mongodb_uri_here
 ```
 
-Use
+Now handles loading enviornment variables into your runtime config behind the scenes. To allow Now to manage your secrets in development mode, use
 
 ```bash
 now dev
@@ -110,8 +110,6 @@ instead of
 ```bash
 yarn dev
 ```
-
-Now handles loading enviornment variables into your runtime config behind the scenes.
 
 - Checkout [/api/add-email-subscriber](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/add-email-subscriber.js) & [/components/EmailListForm] for examples on interacting with MongoDB in a serverless MERN stack.
 
