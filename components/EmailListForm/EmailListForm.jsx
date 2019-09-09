@@ -2,7 +2,7 @@ import './style.less';
 import {
     Form,
     Input,
-    Button
+    Button,
 } from 'antd';
 
 import axios from 'axios';

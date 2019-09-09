@@ -68,3 +68,7 @@ yarn.lock
 
 # Webpack bundle analyzer
 bundles/
+
+# GraphQL Graph Cool
+.envrc
+.graphcoolrc

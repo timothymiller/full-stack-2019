@@ -1,7 +1,7 @@
 import {
   Layout,
   PageHeader,
-  Button
+  Button,
 } from 'antd';
 import "./style.less";
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import Welcome from './welcome.md';
 import MongoDBDemo from '../components/MongoDBDemo/MongoDBDemo';
 import GraphQLDemo from '../components/GraphQLDemo/GraphQLDemo';
 import headerIcon from '../static/favicon/icons-192.png?webp?resize&size=48';
-import withData from '../lib/apollo';
+import { withApollo } from '../lib/apollo';
 
 const { Content, Footer } = Layout;
 
@@ -48,4 +48,4 @@ const Home = () => (
   </Layout>
 )
 
-export default withData(Home);
+export default withApollo(Home);

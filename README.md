@@ -1,6 +1,6 @@
 <p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="256" src="/static/favicon/icons-512.png" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
 
-# MERN + Ant Design + GraphQL + Next.js Production Template
+# MERN + Ant Design + z Next.js Production Template
 
 Deploying web apps to production is hard. This GPLv3-licensed open source template contains optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
 
