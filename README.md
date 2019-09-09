@@ -1,8 +1,8 @@
 <p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="256" src="/static/favicon/icons-512.png" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
 
-# MERN + Ant Design + z Next.js Production Template
+# MERN + Ant Design +  GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. This GPLv3-licensed open source template contains optimal defaults for web apps integrating MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
+Deploying web apps to production is hard. This GPLv3-licensed open source template contains sensible defaults for web apps integrating a GraphQL data graph using a database (MongoDB, MySQL, or PostgreSQL), Express, React, & Node.js, otherwise known as the MERN stack.
 
 This template improves upon a pure MERN stack by including nice-to-have technologies, such as Ant Design, GraphQL, TypeScript, LESS, and JSX in Markdown. I include some example components demonstrating how the frontend & backend interact, following best practices in a serverless enviornment.
 
@@ -24,7 +24,7 @@ yarn dev
 
 ## :hamburger: Tech Stack
 
-- MongoDB
+- MongoDB, MySQL, or PostgreSQL
 - Express
 - React
 - Node
@@ -33,14 +33,25 @@ yarn dev
 
 - [Ant Design](https://github.com/ant-design/ant-design)
   - Crisp, Fresh Component Library
+- [GraphQL](https://github.com/timothymiller/ant-design-next-graphql-template#todo-how-to-setup-graphql) - Database Agnostic
+  - RESTless
+    - Query data with GraphQL (client + server side)
+  - Serverless Database
+    - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+    - MySQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
+    - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
+- No vendor lock-in
+  - Runs on open source software
+  - Serverless Node.js
+    - [AWS Lambda](https://aws.amazon.com/lambda/)
+    - [Zeit Now](https://zeit.co/)
+    - [Firebase Functions](https://firebase.google.com/docs/functions)
+    - [Heroku](https://www.heroku.com/)
+  - Static images are optimized at build time before delivery to CDN. (No Cloudinary necessary)
 - [TypeScript](https://github.com/microsoft/TypeScript) (.ts, .tsx)
 - [Less](https://github.com/less/less.js) (.less)
 - [JSX in Markdown](https://github.com/mdx-js/mdx) (.md, .mdx)
   - Great for news articles or blogging content
-- [MongoDB server side](https://github.com/timothymiller/ant-design-next-graphql-template#how-to-setup-mongodb)
-  - Managed NO-SQL via MongoDB Atlas
-- [GraphQL client](https://github.com/timothymiller/ant-design-next-graphql-template#todo-how-to-setup-graphql)
-  - Modern query language
 - [Next.js](https://github.com/zeit/next.js)
   - Automatic Express routing for Node.js scripts placed in /pages/api/
   - Automatic SSR or Static Rendering depending on call to getInitialProps
