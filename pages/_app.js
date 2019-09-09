@@ -2,7 +2,7 @@ import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 
-export default class MyApp extends App {
+class MyApp extends App {
     static async getInitialProps({ Component, ctx }) {
         let pageProps = {}
 
@@ -14,7 +14,7 @@ export default class MyApp extends App {
     }
 
     render() {
-        const { Component, pageProps } = this.props
+        const { Component, pageProps, graphql } = this.props
 
         return (
             <div>
@@ -28,3 +28,5 @@ export default class MyApp extends App {
         )
     }
 }
+
+export default withGraphQLApp(MyApp)

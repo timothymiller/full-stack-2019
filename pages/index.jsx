@@ -10,7 +10,9 @@ import Welcome from './welcome.md';
 import MongoDBDemo from '../components/MongoDBDemo/MongoDBDemo';
 import GraphQLDemo from '../components/GraphQLDemo/GraphQLDemo';
 import headerIcon from '../static/favicon/icons-192.png?webp?resize&size=48';
-import { withApollo } from '../lib/apollo';
+
+import withApolloClient from '../lib/with-apollo-client'
+import Link from 'next/link'
 
 const { Content, Footer } = Layout;
 
@@ -48,4 +50,4 @@ const Home = () => (
   </Layout>
 )
 
-export default withApollo(Home);
+export default withApolloClient(Home);
