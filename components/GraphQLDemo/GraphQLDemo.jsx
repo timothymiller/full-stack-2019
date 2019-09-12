@@ -27,7 +27,7 @@ const GraphQLDemo = () => {
   if(loading) {
     contents = <div>Now loading...</div>
   } else {
-    if(subscribers) {
+    if(subscribers != undefined && subscribers) {
       contents = <div>
       {subscribers.map((subscriber, index) => (
           <p key = {index + "_subscriber"}>{subscriber.name}</p>
