@@ -42,7 +42,7 @@ yarn dev
   - Receiving form data via POST request
   - Inserting into MongoDB
 - Serverless database options
-  - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas)) :white_check_mark: Used in examples
+  - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas)) :white_check_mark: (used in examples)
   - MySQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
   - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/)) :warning:
     - Example GraphQL [datasource for PostgreSQL database](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/apollo/datasources/MySQLDatabase.js)

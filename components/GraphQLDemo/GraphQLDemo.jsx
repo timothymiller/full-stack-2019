@@ -1,6 +1,6 @@
 import './style.less';
 import {
-    Card,
+  Card,
 } from 'antd';
 const { Meta } = Card;
 import gql from 'graphql-tag'
@@ -18,20 +18,23 @@ const GraphQLDemo = () => {
 
   const {
     loading,
-      data: { subscribers }
+    data
   } = useQuery(GET_SUBSCRIBERS, {
     notifyOnNetworkStatusChange: true
   });
 
   let contents;
-  if(loading) {
+  if (loading) {
     contents = <div>Now loading...</div>
+  } else if (data == undefined) {
+    contents = <div>Error connecting to GraphQL Server</div>
   } else {
-    if(subscribers != undefined && subscribers) {
+    const subscribers = data.subscribers;
+    if (subscribers && subscribers.length > 0) {
       contents = <div>
-      {subscribers.map((subscriber, index) => (
-          <p key = {index + "_subscriber"}>{subscriber.name}</p>
-      ))}
+        {subscribers.map((subscriber, index) => (
+          <p key={index + "_subscriber"}>{subscriber.name}</p>
+        ))}
       </div>
     } else {
       contents = <div>No subscribers</div>
@@ -39,10 +42,10 @@ const GraphQLDemo = () => {
   }
 
   return (
-      <Card className="Card" hoverable="true" title="GraphQL Demo">
-          <Meta style={{ padding: "0px 0px 16px 0px" }} title="Demo email list subscribers:" />
-          {contents}
-      </Card>
+    <Card className="Card" hoverable="true" title="GraphQL Demo">
+      <Meta style={{ padding: "0px 0px 16px 0px" }} title="Demo email list subscribers:" />
+      {contents}
+    </Card>
   )
 }
 
