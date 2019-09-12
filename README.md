@@ -84,7 +84,7 @@ yarn dev
 
 ### Defaults
 
-- Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
+- Node API scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
 
 - Resources inside of /static/ are deployed to the in-house CDN managed via Now by ZEIT.
 

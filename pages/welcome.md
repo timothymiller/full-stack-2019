@@ -41,10 +41,10 @@ yarn dev
 - RESTful example
   - Receiving form data via POST request
   - Inserting into MongoDB
-- Serverless Database
-  - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- Serverless database options
+  - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas)) :white_check_mark: Used in examples
   - MySQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
-  - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
+  - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/)) :warning:
     - Example GraphQL [datasource for PostgreSQL database](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/apollo/datasources/MySQLDatabase.js)
   - [Optional GraphQL query caching](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/graphql.js) [AWS Elastic Cache](https://aws.amazon.com/elasticache/) (Redis)
 - No vendor lock-in
@@ -84,7 +84,7 @@ yarn dev
 
 ### Defaults
 
-- Scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
+- Node API scaling is handled automatically when targeting serverless deployment to Now by ZEIT.
 
 - Resources inside of /static/ are deployed to the in-house CDN managed via Now by ZEIT.
 
