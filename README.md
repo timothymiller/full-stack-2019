@@ -2,9 +2,9 @@
 
 # MERN + Ant Design +  GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. This GPLv3-licensed open source template contains sensible defaults for web apps integrating a database (MongoDB, MySQL, or PostgreSQL), Express, React, & Node.js, otherwise known as the MERN stack.
+Deploying web apps to production is hard. This GPLv3-licensed open source template contains sensible defaults for web apps implementing MongoDB, Express, React, & Node.js, otherwise known as the MERN stack.
 
-This template improves upon a pure MERN stack by including nice-to-have technologies, such as Ant Design, GraphQL, TypeScript, LESS, and JSX in Markdown. I include some example components demonstrating how the frontend & backend interact, following best practices in a serverless enviornment.
+This template improves upon a pure MERN stack by including nice-to-have technologies, such as Ant Design, GraphQL, TypeScript, LESS, and JSX in Markdown. I include example components demonstrating how the frontend & backend interact, following best practices in a serverless enviornment.
 
 I use this template as a starting point for all my web apps. If this template helps you, please consider [leaving me an endorsement on LinkedIn](https://www.linkedin.com/in/timothymillerdev/).
 
@@ -45,6 +45,8 @@ yarn dev
   - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
   - MySQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
   - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
+    - Example GraphQL [datasource for PostgreSQL database](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/apollo/datasources/MySQLDatabase.js)
+  - [Optional GraphQL query caching](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/graphql.js) [AWS Elastic Cache](https://aws.amazon.com/elasticache/) (Redis)
 - No vendor lock-in
   - Runs on open source software
   - Serverless Node.js
@@ -101,7 +103,7 @@ now --prod
 
 ### How to setup MongoDB
 
-Create an account on MongoDB Atlas and create a free tier managed database.
+Create an account on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and create a free tier managed database.
 
 Copy the connection string for accessing the database.
 
@@ -142,10 +144,16 @@ yarn dev
 Under apollo/datasources/MyAPI.js
 
 ```javascript
+this.baseURL = 'https://template.timknowsbest.com/api/';
+```
+
+must be changed to 
+
+```javascript
 this.baseURL = 'http://localhost:3000/api/';
 ```
 
-must be changed to your production URL before deployment.
+to debug using your local API server for GraphQL queries.
 
 [Read more](https://timknowsbest.com/how-to-setup-graphql)
 
