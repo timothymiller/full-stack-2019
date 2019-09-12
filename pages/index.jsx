@@ -2,6 +2,8 @@ import {
   Layout,
   PageHeader,
   Button,
+  Row,
+  Col
 } from 'antd';
 import "./style.less";
 import Link from 'next/link';
@@ -11,8 +13,7 @@ import MongoDBDemo from '../components/MongoDBDemo/MongoDBDemo';
 import GraphQLDemo from '../components/GraphQLDemo/GraphQLDemo';
 import headerIcon from '../static/favicon/icons-192.png?webp?resize&size=48';
 
-import withApolloClient from '../lib/with-apollo-client'
-import Link from 'next/link'
+import withApolloClient from '../apollo/lib/with-apollo-client'
 
 const { Content, Footer } = Layout;
 
@@ -40,8 +41,15 @@ const Home = () => (
       ]}>
     </PageHeader>
     <Content>
-      <GraphQLDemo />
-      <MongoDBDemo />
+      <Row gutter={16} type="flex" justify="space-around">
+        <Col xs={{ span: 24, offset: 2 }} lg={{ span: 10, offset: 2 }}>
+          <GraphQLDemo />
+        </Col>
+        <Col xs={{ span: 24, offset: 2 }} lg={{ span: 10, offset: 2 }}>
+          <MongoDBDemo />
+        </Col>
+      </Row>
+      
       <MDXProvider components={components}>
         <Welcome />
       </MDXProvider>

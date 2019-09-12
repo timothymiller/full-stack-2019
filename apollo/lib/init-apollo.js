@@ -2,7 +2,7 @@ import ApolloClient from 'apollo-client'
 import { SchemaLink } from 'apollo-link-schema'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { HttpLink } from 'apollo-link-http'
-import { schema } from '../apollo/schema'
+import { schema } from '../schema'
 import gql from 'graphql-tag'
 
 let apolloClient = null

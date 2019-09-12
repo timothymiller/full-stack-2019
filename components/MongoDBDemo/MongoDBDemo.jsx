@@ -12,7 +12,7 @@ class MongoDBDemo extends React.Component {
 
     render() {
         return (
-            <Card className="Card" hoverable="true" style={{ width: 460 }} title="MongoDB + REST API Demo">
+            <Card className="Card" hoverable="true" title="MongoDB + REST API Demo">
                 <Meta style={{ padding: "0px 0px 16px 0px" }} title="Subscribe to this demo email list" />
                 <WrappedEmailListForm />
             </Card>

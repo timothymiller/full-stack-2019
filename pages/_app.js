@@ -14,7 +14,7 @@ class MyApp extends App {
     }
 
     render() {
-        const { Component, pageProps, graphql } = this.props
+        const { Component, pageProps } = this.props
 
         return (
             <div>
@@ -29,4 +29,4 @@ class MyApp extends App {
     }
 }
 
-export default withGraphQLApp(MyApp)
+export default MyApp

@@ -58,8 +58,8 @@ module.exports = withBundleAnalyzer(withOffline(withOptimizedImages(withMDX(with
       },
     ],
   },
-  // Deliver images in the smallest size (in increments of 100).
-  sizes: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000],
+  // Deliver images in the smallest size (in increments of 200).
+  sizes: [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000],
   // Webpack Bundle Analyzer
   analyzeServer: ["server", "both"].includes(process.env.BUNDLE_ANALYZE),
   analyzeBrowser: ["browser", "both"].includes(process.env.BUNDLE_ANALYZE),

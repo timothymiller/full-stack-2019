@@ -2,7 +2,7 @@
 
 # MERN + Ant Design +  GraphQL + Next.js Production Template
 
-Deploying web apps to production is hard. This GPLv3-licensed open source template contains sensible defaults for web apps integrating a GraphQL data graph using a database (MongoDB, MySQL, or PostgreSQL), Express, React, & Node.js, otherwise known as the MERN stack.
+Deploying web apps to production is hard. This GPLv3-licensed open source template contains sensible defaults for web apps integrating a database (MongoDB, MySQL, or PostgreSQL), Express, React, & Node.js, otherwise known as the MERN stack.
 
 This template improves upon a pure MERN stack by including nice-to-have technologies, such as Ant Design, GraphQL, TypeScript, LESS, and JSX in Markdown. I include some example components demonstrating how the frontend & backend interact, following best practices in a serverless enviornment.
 
@@ -18,6 +18,7 @@ yarn dev
 ```
 
 ## :warning: Requirements
+
 - [yarn](https://yarnpkg.com)
 - [now-cli](https://zeit.co/download)
 - [MongoDB Atlas Account](https://www.mongodb.com/download-center)
@@ -33,13 +34,17 @@ yarn dev
 
 - [Ant Design](https://github.com/ant-design/ant-design)
   - Crisp, Fresh Component Library
-- [GraphQL](https://github.com/timothymiller/ant-design-next-graphql-template#todo-how-to-setup-graphql) - Database Agnostic
-  - RESTless
-    - Query data with GraphQL (client + server side)
-  - Serverless Database
-    - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
-    - MySQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
-    - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
+- [GraphQL](https://github.com/timothymiller/ant-design-next-graphql-template#how-to-setup-graphql)
+  - Modern query language
+  - RESTLess example
+    - Query data with GraphQL (client and/or server side)
+- RESTful example
+  - Receiving form data via POST request
+  - Inserting into MongoDB
+- Serverless Database
+  - MongoDB ([MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+  - MySQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
+  - PostgreSQL ([AWS Aurora](https://aws.amazon.com/rds/aurora/))
 - No vendor lock-in
   - Runs on open source software
   - Serverless Node.js
@@ -55,7 +60,6 @@ yarn dev
 - [Next.js](https://github.com/zeit/next.js)
   - Automatic Express routing for Node.js scripts placed in /pages/api/
   - Automatic SSR or Static Rendering depending on call to getInitialProps
-  - Locally scoped CSS modules
   - Optimized images
     - Serve images in next-gen formats - Convert JPEG/PNG to WebP on the fly
     - Properly size images - Resize images on the fly
@@ -89,12 +93,19 @@ now --prod
 
 ## :construction: Roadmap
 
+- Locally scoped CSS modules (Ant Design requires globally scoped styles)
 - Remove unused CSS with [next-purgecss](https://github.com/lucleray/next-purgecss) once Ant Design is supported
 - Typography.js integration
 
 ## :microscope: Tutorials
 
 ### How to setup MongoDB
+
+Create an account on MongoDB Atlas and create a free tier managed database.
+
+Copy the connection string for accessing the database.
+
+Replace username & password with your database credentials.
 
 Create a file called '.env' (no single quotes) in the root directory with the following text
 
@@ -122,11 +133,19 @@ instead of
 yarn dev
 ```
 
-- Checkout [/api/add-email-subscriber](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/add-email-subscriber.js) & [/components/EmailListForm] for examples on interacting with MongoDB in a serverless MERN stack.
+- Checkout [/api/add-email-subscriber](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/pages/api/add-email-subscriber.js) & [/components/EmailListForm](https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/components/EmailListForm/EmailListForm.jsx) for examples on interacting with MongoDB in a serverless MERN stack.
 
 [Read more](https://timknowsbest.com/how-to-setup-mongodb)
 
-### TODO How to setup GraphQL
+### How to setup GraphQL
+
+Under apollo/datasources/MyAPI.js
+
+```javascript
+this.baseURL = 'http://localhost:3000/api/';
+```
+
+must be changed to your production URL before deployment.
 
 [Read more](https://timknowsbest.com/how-to-setup-graphql)
 

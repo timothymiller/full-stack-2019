@@ -6,35 +6,44 @@ const { Meta } = Card;
 import gql from 'graphql-tag'
 import { useQuery } from '@apollo/react-hooks'
 
-const ViewerQuery = gql`
-  query ViewerQuery {
-    viewer {
-      id
+const GET_SUBSCRIBERS = gql`
+  query GET_SUBSCRIBERS {
+    subscribers {
       name
-      status @client
     }
   }
 `
 
 const GraphQLDemo = () => {
 
-    const {
-        data: { viewer }
-    } = useQuery(ViewerQuery)
+  const {
+    loading,
+      data: { subscribers }
+  } = useQuery(GET_SUBSCRIBERS, {
+    notifyOnNetworkStatusChange: true
+  });
 
-    if(viewer) {
-        render(
-            <Card className="Card" hoverable="true" style={{ width: 460 }} title="GraphQL Demo">
-                <Meta style={{ padding: "0px 0px 16px 0px" }} title="Current number of demo email list subscribers:" />
-    
-            </Card>
-        );
+  let contents;
+  if(loading) {
+    contents = <div>Now loading...</div>
+  } else {
+    if(subscribers) {
+      contents = <div>
+      {subscribers.map((subscriber, index) => (
+          <p key = {index + "_subscriber"}>{subscriber.name}</p>
+      ))}
+      </div>
+    } else {
+      contents = <div>No subscribers</div>
     }
-    return null;
-}
-
-Index.getInitialProps = async ({ client }) => {
-    await client.query({ query: ViewerQuery })
   }
+
+  return (
+      <Card className="Card" hoverable="true" title="GraphQL Demo">
+          <Meta style={{ padding: "0px 0px 16px 0px" }} title="Demo email list subscribers:" />
+          {contents}
+      </Card>
+  )
+}
 
 export default GraphQLDemo;

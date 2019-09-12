@@ -1,7 +1,8 @@
 export const resolvers = {
     Query: {
-      viewer (_parent, _args, _context, _info) {
-        return { name: 'John Smith', id: 1 }
+      subscribers (_parent, _args, _context, _info) {
+        return _context.dataSources.restAPI.getSubscribers();
       }
+      
     }
   }
