@@ -4,7 +4,7 @@ class MyAPI extends RESTDataSource {
   constructor() {
     super();
     // During DEVELOPMENT change this to http://localhost:3000/api/
-    this.baseURL = 'http://localhost:3000/api/'; 
+    this.baseURL = 'https://template.timknowsbest.com/api/'; 
     // Before deployment to production, change to production URL
     // eg: 'https://template.timknowsbest.com/api/';
   }
