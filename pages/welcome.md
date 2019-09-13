@@ -1,4 +1,4 @@
-<p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="256" src="/static/favicon/icons-512.png" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
+<p align="center"><a href="https://template.timknowsbest.com" target="_blank" rel="noopener noreferrer"><img width="256" src="/static/favicon/icons-512.png?webp?resize&size=256" alt="MERN + Ant Design + GraphQL + Next.js Template logo"/></a></p>
 
 # MERN + Ant Design +  GraphQL + Next.js Production Template
 
@@ -77,8 +77,6 @@ yarn dev
   - Best Practices
   - SEO
   - [Progressive Web App](https://developers.google.com/web/progressive-web-apps/) (PWA)
-
-![Perfect Lighthouse score|52x37](https://template.timknowsbest.com/static/images/perfect-lighthouse-score.gif)
 
 ## :rocket: Deploy to Production
 
