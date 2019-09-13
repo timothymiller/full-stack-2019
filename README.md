@@ -90,7 +90,7 @@ yarn dev
 
 ```bash
 now login
-now --prod
+now -e MONGODB_URI="<replace_with_your_mongodb_uri>" --prod
 ```
 
 ## :construction: Roadmap
