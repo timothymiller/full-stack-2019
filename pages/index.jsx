@@ -30,7 +30,8 @@ const Home = () => (
   <Layout>
     <PageHeader title="Template"
       avatar={{
-        src: headerIcon
+        src: headerIcon,
+        alt: "MERN Template Logo"
       }}
       extra={[
         <Button href="https://github.com/timothymiller/mern-ant-design-graphql-next-template"
@@ -49,7 +50,7 @@ const Home = () => (
           <MongoDBDemo />
         </Col>
       </Row>
-      
+
       <MDXProvider components={components}>
         <Welcome />
       </MDXProvider>
