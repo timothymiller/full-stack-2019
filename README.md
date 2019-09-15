@@ -11,8 +11,8 @@ I use this template as a starting point for all my web apps. If this template he
 ## :wrench: How to setup
 
 ```bash
-git clone https://github.com/timothymiller/ant-design-next-graphql-template.git
-cd ant-design-next-graphql-template
+git clone https://github.com/timothymiller/mern-ant-design-graphql-next-template.git
+cd mern-ant-design-graphql-next-template
 yarn
 yarn dev
 ```
