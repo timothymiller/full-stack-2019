@@ -4,6 +4,10 @@ const withOptimizedImages = require('next-optimized-images')
 // Service Worker for Progressive Web App (PWA) standards
 const withOffline = require('next-offline')
 
+// .env Environment variables
+require("dotenv").config();
+const webpack = require("webpack");
+
 // Bundle Analyzer
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer")
 
@@ -107,6 +111,24 @@ module.exports = withBundleAnalyzer(withOffline(withOptimizedImages(withMDX(with
         use: 'null-loader',
       })
     }
+
+    // Fixes npm packages that depend on `fs` module
+    config.node = {
+      fs: 'empty'
+    }
+    /**
+     * Returns environment variables as an object
+     */
+    const env = Object.keys(process.env).reduce((acc, curr) => {
+      acc[`process.env.${curr}`] = JSON.stringify(process.env[curr]);
+      return acc;
+    }, {});
+
+    /** Allows you to create global constants which can be configured
+    * at compile time, which in our case is our environment variables
+    */
+    config.plugins.push(new webpack.DefinePlugin(env));
+
     return config
   },
 }))))))
