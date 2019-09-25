@@ -44,7 +44,9 @@ class MyApp extends App {
 
 if (typeof window !== "undefined") {
     window.onload = () => {
-        document.getElementById("holderStyle").remove();
+        if (document.getElementById("holderStyle")) {
+            document.getElementById("holderStyle").remove();
+        }
     };
 }
 
