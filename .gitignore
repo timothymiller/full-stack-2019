@@ -72,3 +72,4 @@ bundles/
 # GraphQL Graph Cool
 .envrc
 .graphcoolrc
+package-lock.json
